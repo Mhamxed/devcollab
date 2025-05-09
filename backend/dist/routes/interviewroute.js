@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const interviewController_1 = require("../controllers/interviewController");
+const interview = (0, express_1.Router)();
+interview.get("/api/interviews", interviewController_1.interviews);
+interview.post("/api/interviews", interviewController_1.createInterview);
+interview.get("api/interviews/:id", interviewController_1.interviewById);
+interview.put("/api/interviews/:id", interviewController_1.updateInterview);
+interview.delete("/api/interviews/:id ", interviewController_1.deleteInterview);
+interview.get("/api/interviews/:id/invite", interviewController_1.invite);
+exports.default = interview;

@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const sessionController_1 = require("../controllers/sessionController");
+const session = (0, express_1.Router)();
+session.post("/api/sessions", sessionController_1.createSession);
+session.get("api/sessions/:id", sessionController_1.sessionById);
+session.put("/api/sessions/:id/code", sessionController_1.updateSessionCode);
+session.put("/api/sessions/:id/execute", sessionController_1.executeSessionCode);
+session.put("/api/sessions/:id/chat", sessionController_1.addChatMessage);
+exports.default = session;

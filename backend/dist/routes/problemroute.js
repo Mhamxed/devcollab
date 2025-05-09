@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const problemController_1 = require("../controllers/problemController");
+const problem = (0, express_1.Router)();
+problem.get("/api/problems", problemController_1.problems);
+problem.post("/api/problems", problemController_1.createProblem);
+problem.get("/api/problems/:id", problemController_1.problemById);
+problem.put("/api/problems/:id", problemController_1.updateProblem);
+problem.put("/api/problems/:id/favorite", problemController_1.toggleFavorite);
+problem.delete("/api/problems/:id", problemController_1.deleteProblem);
+exports.default = problem;
