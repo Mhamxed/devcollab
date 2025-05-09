@@ -668,7 +668,7 @@ export default function Dashboard() {
                               >
                                   <Trash className="mr-2 h-4 w-4" /> Delete
                               </button>
-                              <Link to={`/sessions/${session._id}/code`}>
+                              <Link to={`/sessions/${session._id}`}>
                                 <button className="inline-flex gap-2 items-center cursor-pointer px-3 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                                     <Rocket size={18} />
                                     Launch session
